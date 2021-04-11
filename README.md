@@ -13,11 +13,11 @@
 ## <b>Login</b> 
     Uma tela simples, onde não é necessário fazer login de nunhum tipo.
 
-![Tela Principal](images/login.png)
+![Tela Principal](images/01.png)
 <hr>
 
 ## <b>Calculo de Horas</b> 
     Tela onde vai ser informada as 4 horas do dia de trabalho.
 
-![Tela Principal](images/01.png)
+![Tela Principal](images/02.png)
 <hr>
