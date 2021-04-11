@@ -53,7 +53,7 @@
 }
 
 .containerHours {
-  margin-top: 60px;
+  margin-top: 50px;
 
   display: flex;
   align-items: center;
@@ -95,8 +95,6 @@
   justify-content: space-around;
   align-items: center;
 
-  margin: 15px;
-
   width: 400px;
   height: 80px;
   text-align: center;
@@ -116,11 +114,32 @@
   cursor: pointer;
 }
 
+.alert {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 40px;
+  color: red;
+}
+
+
+
+
 @media (max-width: 800px) {
   .containerHeaderbar p {
     padding: 15px;
     font-weight: bold;
     font-size: 25px;
+  }
+
+  .alert {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 18px;
+    color: red;
   }
 
   .containerHeaderbar a {
@@ -166,8 +185,6 @@
     height: auto;
 
     background-color: #89D5E3;
-
-
   }
 }
 
@@ -189,6 +206,15 @@
 
   .containerHeaderbar p {
     font-size: 20px;
+  }
+
+  .alert {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 13px;
+    color: red;
   }
 
 }
