@@ -33,7 +33,8 @@
   justify-content: space-around;
   align-items: center;
 
-  margin: 15px;
+  margin-right: 25px;
+
 
   width: 250px;
   height: 50px;
@@ -113,4 +114,59 @@
 .containerButtonCalculator:hover {
   background-color: #d19e3f;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .containerHeaderbar p {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .containerHeaderbar a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-right: 25px;
+
+
+    width: 150px;
+    height: 40px;
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: bold;
+
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .containerHeaderbar p {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .containerHours {
+    margin-top: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100vw;
+    height: auto;
+  
+    background-color: #89D5E3;
+  
+  
+  }
 }

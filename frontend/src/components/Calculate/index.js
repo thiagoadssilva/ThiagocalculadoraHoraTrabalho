@@ -25,7 +25,7 @@ export default () => {
   function catchTime4(event) {
     setEntrance4(event.target.value);
   }
-  
+
   function calculateTime() {
 
     var ms1 = moment(entrance1, "HH:mm:ss").diff(moment(entrance2, "HH:mm:ss"));
@@ -46,12 +46,16 @@ export default () => {
       minutes -= 60; hours += 1;
     }
 
-    if(minutes == '0'){
+    if (minutes == '0') {
       minutes = minutes + '0';
     }
-    
+
     var horaFinal = Math.abs(hours) + ":" + minutes;
-    setResultClock(horaFinal);
+
+    if(horaFinal != 'NaN:NaN'){
+      setResultClock(horaFinal);
+    }
+    
   }
 
   return (
@@ -89,8 +93,6 @@ export default () => {
         <div className={styles.containerHours}>
           <p>{resultClock}</p>
         </div>
-
-
       </div>
       <Footer />
     </div>

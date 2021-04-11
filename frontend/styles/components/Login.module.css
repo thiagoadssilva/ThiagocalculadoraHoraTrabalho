@@ -28,7 +28,7 @@
   justify-content: space-around;
   align-items: center;
 
-  margin: 15px;
+  margin: 25px;
 
   width: 250px;
   height: 50px;
@@ -39,14 +39,14 @@
 
   background: #F2B138;
   border-radius: 15px;
-  
+
 }
 
-.containerHeaderbar a:hover{
+.containerHeaderbar a:hover {
   background-color: #d19e3f;
 }
 
-.imageClock{
+.imageClock {
   width: 30px;
   height: 30px;
 }
@@ -55,4 +55,43 @@
   height: 100vh;
   width: 100vw;
 
+}
+
+@media (max-width: 800px) {
+  .containerHeaderbar p {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .containerHeaderbar a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 15px;
+    margin: 25px;
+
+    width: 150px;
+    height: 40px;
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    background: #F2B138;
+    border-radius: 15px;
+
+  }
+
+}
+
+@media (max-width: 600px) {
+  .containerHeaderbar p {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+ 
 }
