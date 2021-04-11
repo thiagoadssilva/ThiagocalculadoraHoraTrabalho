@@ -134,7 +134,7 @@ export default () => {
       var resto = (minutes % 60);
 
       if (parteInteira > 1) {
-            hours += parteInteira;
+            hours += parseInt(parteInteira);
       }
 
       if (resto > 0) {
