@@ -4,6 +4,8 @@ import moment from 'moment';
 import styles from '../../../styles/components/Calculate.module.css';
 import Link from 'next/link';
 
+import Footer from '../Footer';
+
 export default () => {
   const [entrance1, setEntrance1] = useState();
   const [entrance2, setEntrance2] = useState();
@@ -90,6 +92,7 @@ export default () => {
 
 
       </div>
+      <Footer />
     </div>
   );
 }

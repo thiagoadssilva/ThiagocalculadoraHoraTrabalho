@@ -1,5 +1,6 @@
 import styles from '../../../styles/components/Login.module.css';
 import Link from 'next/link';
+import Footer from '../Footer';
 
 export default () => {
   return (
@@ -12,14 +13,12 @@ export default () => {
         </Link>
       </div>
 
-      <div>
-        <img
-          className={styles.containerImage}
-          src="/Hora-Extra.jpg"
-          alt="Calculo das Horas Tabalhadas"
-        />
-      </div>
-
+      <img
+        className={styles.containerImage}
+        src="/Hora-Extra.jpg"
+        alt="Calculo das Horas Tabalhadas"
+      />
+      <Footer />
     </div>
   );
 }
