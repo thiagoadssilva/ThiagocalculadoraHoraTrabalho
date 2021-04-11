@@ -29,3 +29,15 @@
 
   margin-right: 20px;
 }
+
+@media (max-width: 400px){
+  .container p{
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .container img {
+    height: 40px;
+    width: 60px;
+  }
+}

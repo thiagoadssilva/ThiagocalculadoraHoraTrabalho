@@ -139,7 +139,7 @@
     font-weight: bold;
 
   }
-  
+
 }
 
 @media (max-width: 600px) {
@@ -164,9 +164,31 @@
   .container {
     width: 100vw;
     height: auto;
-  
+
     background-color: #89D5E3;
-  
-  
+
+
   }
+}
+
+@media (max-width: 400px) {
+  .containerButtonCalculator {
+    width: 300px;
+    height: 80px;
+    text-align: center;
+
+    font-size: 50px;
+    font-weight: bold;
+
+    background: #F2B138;
+    border-radius: 15px;
+
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .containerHeaderbar p {
+    font-size: 20px;
+  }
+
 }

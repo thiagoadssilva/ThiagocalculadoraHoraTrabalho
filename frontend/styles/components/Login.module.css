@@ -92,6 +92,37 @@
     font-weight: bold;
     font-size: 20px;
   }
+}
 
- 
+@media (max-width: 400px) {
+  .containerHeaderbar p {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .containerHeaderbar a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 15px;
+    margin: 25px;
+
+    width: 100px;
+    height: 30px;
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    background: #F2B138;
+    border-radius: 15px;
+
+  }
+
+  .imageClock {
+    width: 10px;
+    height: 10px;
+  }
 }
