@@ -1,0 +1,55 @@
+.container {}
+
+.containerHeaderbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #003F63;
+}
+
+.containerHeaderbar p {
+  padding: 15px;
+
+  font-weight: bold;
+  font-size: 36px;
+  color: #D9D9D9;
+}
+
+.containerHeaderbar a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 15px;
+
+  width: 250px;
+  height: 50px;
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: bold;
+
+  background: #F2B138;
+  border-radius: 15px;
+  
+}
+
+.containerHeaderbar a:hover{
+  background-color: #d19e3f;
+}
+
+.imageClock{
+  width: 30px;
+  height: 30px;
+}
+
+.containerImage {
+  height: 100vh;
+  width: 100vw;
+}

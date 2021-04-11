@@ -1,7 +1,9 @@
+import Login from '../components/Login';
+
 export default () => {
   return (
-    <div>
-      thiago jose da silva
-    </div>
+    <>
+      <Login />
+    </>
   )
 }

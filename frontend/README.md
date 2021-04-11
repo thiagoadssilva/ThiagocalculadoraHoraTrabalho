@@ -6,3 +6,16 @@
 
 <hr/>
 
+## moment
+
+		 yarn add moment --save
+
+* Moment.js é uma biblioteca javascript disponível gratuitamente. Através dela é possível converter, manipular, validar e apresentar datas em javascript. Neste artigo vamos apresentar o Moment.js e mostrar alguns exemplos de utilização desta biblioteca.
+
+* Link para a instalação completa
+	* https://ifpb.github.io/jaguaribetech/2016/09/01/moment-js/
+
+   * https://momentjs.com/
+
+
+<hr>

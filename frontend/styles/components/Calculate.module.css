@@ -1,0 +1,116 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #89D5E3;
+
+
+}
+
+.containerHeaderbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #003F63;
+}
+
+.containerHeaderbar p {
+  padding: 15px;
+
+  font-weight: bold;
+  font-size: 36px;
+  color: #D9D9D9;
+}
+
+.containerHeaderbar a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 15px;
+
+  width: 250px;
+  height: 50px;
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: bold;
+
+  background: #F2B138;
+  border-radius: 15px;
+
+}
+
+.containerHeaderbar a:hover {
+  background-color: #d19e3f;
+}
+
+.containerHours {
+  margin-top: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.containerHours div p {
+  font-weight: bold;
+  font-size: 36px;
+  color: #000000;
+}
+
+.containerHours p {
+  font-weight: bold;
+  font-size: 120px;
+  color: #000000;
+}
+
+.containerHours input {
+  width: 288px;
+  height: 100px;
+
+  background: #D9D9D9;
+  border-radius: 15px;
+
+  font-size: 50px;
+  font-weight: bold;
+
+  padding: 20px;
+}
+
+.imageClock {
+  width: 60px;
+  height: 60px;
+}
+
+.containerButtonCalculator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 15px;
+
+  width: 400px;
+  height: 80px;
+  text-align: center;
+
+  font-size: 60px;
+  font-weight: bold;
+
+  background: #F2B138;
+  border-radius: 15px;
+
+  margin: auto;
+  margin-top: 50px;
+}
+
+.containerButtonCalculator:hover {
+  background-color: #d19e3f;
+  cursor: pointer;
+}
