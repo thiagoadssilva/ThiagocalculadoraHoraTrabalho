@@ -26,30 +26,31 @@ export default () => {
   
   function calculateTime() {
 
-    var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
+    var ms1 = moment(entrance1, "HH:mm:ss").diff(moment(entrance2, "HH:mm:ss"));
     var convert1 = moment.duration(ms1);
     var hours1 = Math.floor(convert1.asHours()) + moment.utc(ms1).format(":mm:ss");
 
-    var ms2 = moment(entrance3, "HH:mm").diff(moment(entrance4, "HH:mm"));
+    var ms2 = moment(entrance3, "HH:mm:ss").diff(moment(entrance4, "HH:mm:ss"));
     var convert2 = moment.duration(ms2);
     var hours2 = Math.floor(convert2.asHours()) + moment.utc(ms2).format(":mm:ss");
 
 
     var hours1 = hours1.split(':');
     var hours2 = hours2.split(':');
-    var horasTotal = parseInt(hours1[0], 10) + parseInt(hours2[0], 10);
-    var minutosTotal = parseInt(hours1[1], 10) + parseInt(hours2[1], 10);
+    var hours = parseInt(hours1[0], 10) + parseInt(hours2[0], 10);
+    var minutes = parseInt(hours1[1], 10) + parseInt(hours2[1], 10);
 
-    if (minutosTotal >= 60) {
-      minutosTotal -= 60; horasTotal += 1;
+    if (minutes >= 60) {
+      minutes -= 60; hours += 1;
     }
-    var horaFinal = horasTotal + ":" + minutosTotal;
-    //return horaFinal; 
-    setResultClock(horaFinal)
-    console.log(horaFinal);
+
+    if(minutes == '0'){
+      minutes = minutes + '0';
+    }
+    
+    var horaFinal = Math.abs(hours) + ":" + minutes;
+    setResultClock(horaFinal);
   }
-
-
 
   return (
     <div>
