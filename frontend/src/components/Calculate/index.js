@@ -129,7 +129,7 @@ export default () => {
       var hours = hours1 + hours2;
       var minutes = totalsMinutes1 + totalsMinutes2;    
 
-      var parteInteira = (minutes / 60);
+      var parteInteira = Math.floor(minutes / 60);
 
       var resto = (minutes % 60);
 
