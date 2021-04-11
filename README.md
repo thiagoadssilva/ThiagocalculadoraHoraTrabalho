@@ -6,8 +6,7 @@
 
 <hr/>
 
-## Projeto Publicado na vercel: 
-    * https://horas.vercel.app/
+## Projeto Publicado na vercel: https://horas.vercel.app/
 
 <hr/>
 ## <b>Login</b> 
