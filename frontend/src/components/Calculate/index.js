@@ -51,7 +51,8 @@ export default () => {
     } else {
       setAlert('');
 
-      var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
+
+     /* var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
       var convert1 = moment.duration(ms1);
       var hours1 = parseInt(convert1.asHours());
 
@@ -87,7 +88,60 @@ export default () => {
 
       if (minutes == '0') {
         minutes = minutes + '0';
+      } */
+
+      //var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
+      //var convert1 = moment.duration(ms1);
+      //var hours1 = parseInt(convert1.asHours());
+
+      //var ms2 = moment(entrance3, "HH:mm").diff(moment(entrance4, "HH:mm"));
+      //var convert2 = moment.duration(ms2);
+      //var hours2 = parseInt(convert2.asHours());
+
+      //console.log(hours2);
+
+      var hours1 = entrance1.split(':');
+      var hours2 = entrance2.split(':');
+      var hours3 = entrance3.split(':');
+      var hours4 = entrance4.split(':');
+
+      hours1 = (parseInt(hours2[0]) - parseInt(hours1[0]));
+      hours2 = (parseInt(hours4[0]) - parseInt(hours3[0]));
+
+      var minutes1 = entrance1.split(':');
+      var minutes2 = entrance2.split(':');
+
+      var totalsMinutes1 = 0;
+
+      if (parseInt(minutes1[1]) != parseInt(minutes2[1])) {
+            var totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
+      } 
+
+      var minutes3 = entrance3.split(':');
+      var minutes4 = entrance4.split(':');
+
+      var totalsMinutes2 = 0;
+
+      if (parseInt(minutes3[1]) != parseInt(minutes4[1])) {
+            var totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
+      }  
+
+      var hours = hours1 + hours2;
+      var minutes = totalsMinutes1 + totalsMinutes2;    
+
+      var parteInteira = (minutes / 60);
+
+      var resto = (minutes % 60);
+
+      if (parteInteira > 1) {
+            hours += parteInteira;
       }
+
+      if (resto > 0) {
+            minutes = resto;
+      }
+
+
 
       var horaFinal = hours + "h : " + minutes + "m";
 
