@@ -11,7 +11,7 @@ export default () => {
   const [entrance2, setEntrance2] = useState();
   const [entrance3, setEntrance3] = useState();
   const [entrance4, setEntrance4] = useState();
-  const [resultClock, setResultClock] = useState("00:00");
+  const [resultClock, setResultClock] = useState("");
   const [alert, setAlert] = useState();
 
   function catchTime1(event) {
@@ -61,11 +61,11 @@ export default () => {
 
       var minutes1 = entrance1.split(':');
       var minutes2 = entrance2.split(':');
-      var totalsMinutes1 = parseInt(minutes1[1]) - parseInt(minutes2[1]);
+      var totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
 
       var minutes3 = entrance3.split(':');
       var minutes4 = entrance4.split(':');
-      var totalsMinutes2 = parseInt(minutes3[1]) - parseInt(minutes4[1]);
+      var totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
 
       console.log(totalsMinutes1);
       console.log(totalsMinutes2);
@@ -89,7 +89,7 @@ export default () => {
         minutes = minutes + '0';
       }
 
-      var horaFinal = hours + "h : " + minutes + "m";
+      var horaFinal = hours + "h " + minutes + "m";
 
       if (horaFinal != 'NaN:NaN') {
         setResultClock(horaFinal);
