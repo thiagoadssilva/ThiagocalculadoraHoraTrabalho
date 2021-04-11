@@ -6,10 +6,10 @@
 
 <hr/>
 
-## Projeto Publicado na vercel: 
-    * https://horas.vercel.app/
+## Projeto Publicado na vercel: https://horas.vercel.app/
 
 <hr/>
+
 ## <b>Login</b> 
     Uma tela simples, onde não é necessário fazer login de nunhum tipo.
 
