@@ -64,17 +64,17 @@ export default () => {
 
       var totalsMinutes1 = 0;
 
-      if (parseInt(minutes1[1]) != parseInt(minutes2[1])) {
-        var totalsMinutes1;
-        if (parseInt(minutes2[1]) < parseInt(minutes1[1])) {
-          let diffMinutes1 = (parseInt(minutes1[1]) - parseInt(minutes2[1]));
-          totalsMinutes1 = 60 - diffMinutes1;
-          hours1 -= 1;
-        } else {
-          totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
-        }
-      }
-
+      if ((parseInt(minutes1[1]) != parseInt(minutes2[1]))) {
+          var totalsMinutes1;
+            
+          if ( parseInt(minutes2[1]) < parseInt(minutes1[1]) ) {
+                let diffMinutes1 = (parseInt(minutes1[1]) - parseInt(minutes2[1]));
+                totalsMinutes1 = 60 - diffMinutes1;       
+                hours1 -= 1;
+          } else {
+            totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
+          }
+      } 
 
       var minutes3 = entrance3.split(':');
       var minutes4 = entrance4.split(':');
@@ -82,9 +82,10 @@ export default () => {
       var totalsMinutes2 = 0;
 
       if (parseInt(minutes3[1]) != parseInt(minutes4[1])) {
+        
         var totalsMinutes2;
-        if (parseInt(minutes4[1]) < parseInt(minutes3[1])) {
-
+        
+        if ( (parseInt(minutes4[1]) < parseInt(minutes3[1])) ) {
           let diffMinutes2 = (parseInt(minutes3[1]) - parseInt(minutes4[1]));
           totalsMinutes2 = 60 - diffMinutes2;
           console.log(totalsMinutes2)
@@ -92,26 +93,28 @@ export default () => {
         } else {
           totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
         }
-      }
-
+      }  
 
       console.log(hours2);
 
       var hours = hours1 + hours2;
-      var minutes = totalsMinutes1 + totalsMinutes2;
+      var minutes = totalsMinutes1 + totalsMinutes2;    
+
+      console.log(minutes)
 
       var parteInteira = Math.floor(minutes / 60);
 
       if (parteInteira >= 1) {
         hours += parseInt(parteInteira);
+        minutes -= 60
       }
 
       var resto = (minutes % 60);
 
       if (resto > 0) {
-        minutes = resto;
+            minutes = resto;
       }
-
+ 
       var horaFinal = hours + "h " + minutes + "m";
 
       if (horaFinal != 'NaN:NaN') {
