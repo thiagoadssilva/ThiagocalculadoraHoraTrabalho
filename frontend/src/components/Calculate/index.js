@@ -114,7 +114,15 @@ export default () => {
       var totalsMinutes1 = 0;
 
       if (parseInt(minutes1[1]) != parseInt(minutes2[1])) {
-            var totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
+          var totalsMinutes1;
+            
+          if ( parseInt(minutes2[1]) < parseInt(minutes1[1]) ) {
+                let diffMinutes1 = (parseInt(minutes1[1]) - parseInt(minutes2[1]));
+                totalsMinutes1 = 60 - diffMinutes1;
+                hours1 -= 1;
+          } else {
+            totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
+          }
       } 
 
       var minutes3 = entrance3.split(':');
@@ -123,7 +131,18 @@ export default () => {
       var totalsMinutes2 = 0;
 
       if (parseInt(minutes3[1]) != parseInt(minutes4[1])) {
-            var totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
+        
+        var totalsMinutes2;
+        
+        if ( parseInt(minutes4[1]) < parseInt(minutes3[1])) {
+          let diffMinutes2 = (parseInt(minutes4[1]) - parseInt(minutes3[1]));
+          totalsMinutes12 = 60 - diffMinutes2;
+          hours2 -= 1;
+
+        } else {
+          totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
+        }
+            
       }  
 
       var hours = hours1 + hours2;
