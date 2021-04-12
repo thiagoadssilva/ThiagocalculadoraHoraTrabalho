@@ -51,55 +51,6 @@ export default () => {
     } else {
       setAlert('');
 
-
-     /* var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
-      var convert1 = moment.duration(ms1);
-      var hours1 = parseInt(convert1.asHours());
-
-      var ms2 = moment(entrance3, "HH:mm").diff(moment(entrance4, "HH:mm"));
-      var convert2 = moment.duration(ms2);
-      var hours2 = parseInt(convert2.asHours());
-
-      var minutes1 = entrance1.split(':');
-      var minutes2 = entrance2.split(':');
-      var totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
-
-      var minutes3 = entrance3.split(':');
-      var minutes4 = entrance4.split(':');
-      var totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
-
-      console.log(totalsMinutes1);
-      console.log(totalsMinutes2);
-
-
-
-
-
-      // var hours1 = hours1.split(':');
-      // var hours2 = hours2.split(':');
-      var hours = hours1 + hours2;
-      var minutes = totalsMinutes1 + totalsMinutes2;
-      //var minutes = parseInt(hours1[1], 10) + parseInt(hours2[1], 10);
-
-      // if (minutes >= 60) {
-      //   minutes -= 60; 
-      //   hours += 1;
-      // }
-
-      if (minutes == '0') {
-        minutes = minutes + '0';
-      } */
-
-      //var ms1 = moment(entrance1, "HH:mm").diff(moment(entrance2, "HH:mm"));
-      //var convert1 = moment.duration(ms1);
-      //var hours1 = parseInt(convert1.asHours());
-
-      //var ms2 = moment(entrance3, "HH:mm").diff(moment(entrance4, "HH:mm"));
-      //var convert2 = moment.duration(ms2);
-      //var hours2 = parseInt(convert2.asHours());
-
-      //console.log(hours2);
-
       var hours1 = entrance1.split(':');
       var hours2 = entrance2.split(':');
       var hours3 = entrance3.split(':');
@@ -114,16 +65,15 @@ export default () => {
       var totalsMinutes1 = 0;
 
       if (parseInt(minutes1[1]) != parseInt(minutes2[1])) {
-          var totalsMinutes1;
-            
-          if ( parseInt(minutes2[1]) < parseInt(minutes1[1]) ) {
-                let diffMinutes1 = (parseInt(minutes1[1]) - parseInt(minutes2[1]));
-                totalsMinutes1 = 60 - diffMinutes1;
-                hours1 -= 1;
-          } else {
-            totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
-          }
-      } 
+        var totalsMinutes1;
+        if (parseInt(minutes2[1]) < parseInt(minutes1[1])) {
+          let diffMinutes1 = (parseInt(minutes1[1]) - parseInt(minutes2[1]));
+          totalsMinutes1 = 60 - diffMinutes1;
+          hours1 -= 1;
+        } else {
+          totalsMinutes1 = parseInt(minutes1[1]) + parseInt(minutes2[1]);
+        }
+      }
 
       var minutes3 = entrance3.split(':');
       var minutes4 = entrance4.split(':');
@@ -131,39 +81,32 @@ export default () => {
       var totalsMinutes2 = 0;
 
       if (parseInt(minutes3[1]) != parseInt(minutes4[1])) {
-        
         var totalsMinutes2;
-        
-        if ( parseInt(minutes4[1]) < parseInt(minutes3[1])) {
+        if (parseInt(minutes4[1]) < parseInt(minutes3[1])) {
           let diffMinutes2 = (parseInt(minutes3[1]) - parseInt(minutes4[1]));
           totalsMinutes2 = 60 - diffMinutes2;
           hours2 -= 1;
-
         } else {
           totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
         }
-            
-      }  
+      }
 
       var hours = hours1 + hours2;
-      var minutes = totalsMinutes1 + totalsMinutes2;    
-
-      console.log(minutes)
+      var minutes = totalsMinutes1 + totalsMinutes2;
 
       var parteInteira = Math.floor(minutes / 60);
 
       var resto = (minutes % 60);
 
       if (parteInteira >= 1) {
-            hours += parseInt(parteInteira);
+        hours += parseInt(parteInteira);
       }
 
       if (resto > 0) {
-            minutes = resto;
+        minutes = resto;
       }
 
       var horaFinal = hours + "h " + minutes + "m";
-
 
       if (horaFinal != 'NaN:NaN') {
         setResultClock(horaFinal);
