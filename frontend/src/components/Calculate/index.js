@@ -135,8 +135,8 @@ export default () => {
         var totalsMinutes2;
         
         if ( parseInt(minutes4[1]) < parseInt(minutes3[1])) {
-          let diffMinutes2 = (parseInt(minutes4[1]) - parseInt(minutes3[1]));
-          totalsMinutes12 = 60 - diffMinutes2;
+          let diffMinutes2 = (parseInt(minutes3[1]) - parseInt(minutes4[1]));
+          totalsMinutes2 = 60 - diffMinutes2;
           hours2 -= 1;
 
         } else {
@@ -148,11 +148,13 @@ export default () => {
       var hours = hours1 + hours2;
       var minutes = totalsMinutes1 + totalsMinutes2;    
 
+      console.log(minutes)
+
       var parteInteira = Math.floor(minutes / 60);
 
       var resto = (minutes % 60);
 
-      if (parteInteira > 1) {
+      if (parteInteira >= 1) {
             hours += parseInt(parteInteira);
       }
 
