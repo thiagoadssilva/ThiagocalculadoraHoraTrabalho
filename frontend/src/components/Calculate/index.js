@@ -104,12 +104,12 @@ export default () => {
 
       var parteInteira = Math.floor(minutes / 60);
 
-      var resto = (minutes % 60);
-
       if (parteInteira >= 1) {
-            hours += parseInt(parteInteira);
-            minutes -= 60
+        hours += parseInt(parteInteira);
+        minutes -= 60
       }
+
+      var resto = (minutes % 60);
 
       if (resto > 0) {
             minutes = resto;
