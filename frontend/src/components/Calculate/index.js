@@ -75,6 +75,7 @@ export default () => {
         }
       }
 
+
       var minutes3 = entrance3.split(':');
       var minutes4 = entrance4.split(':');
 
@@ -83,13 +84,18 @@ export default () => {
       if (parseInt(minutes3[1]) != parseInt(minutes4[1])) {
         var totalsMinutes2;
         if (parseInt(minutes4[1]) < parseInt(minutes3[1])) {
+
           let diffMinutes2 = (parseInt(minutes3[1]) - parseInt(minutes4[1]));
           totalsMinutes2 = 60 - diffMinutes2;
+          console.log(totalsMinutes2)
           hours2 -= 1;
         } else {
           totalsMinutes2 = parseInt(minutes3[1]) + parseInt(minutes4[1]);
         }
       }
+
+
+      console.log(hours2);
 
       var hours = hours1 + hours2;
       var minutes = totalsMinutes1 + totalsMinutes2;
